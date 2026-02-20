@@ -1,5 +1,8 @@
 # Washington State Wildfires Map
 
+# AI Disclosure
+AI was used to debug my code.
+
 ## Web Map URL
 You can view the interactive map here:  
 https://jonnyjs2.github.io/458lab6/map.html

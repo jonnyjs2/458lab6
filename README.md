@@ -2,7 +2,7 @@
 
 ## Web Map URL
 You can view the interactive map here:  
-https://jonnyjs2.github.io/jonnyjs2/map.html  
+https://jonnyjs2.github.io/458lab6/map.html
 
 ## Map Overview
 This interactive web map shows **wildfire incidents across Washington State from 2008 to 2025**. Users can explore wildfire locations, see details about each incident, and filter fires by year.  

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Washington State Wildfires</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div id="map"></div>
+
+    <div id="sidebar">
+        <h2>Washington State Wildfires</h2>
+        <label for="yearRange">Filter by Year: <span id="yearLabel"></span></label>
+        <input type="range" id="yearRange" min="2008" max="2025" step="1" value="2025">
+        <table id="fireTable">
+            <thead>
+                <tr>
+                    <th>Incident Name</th>
+                    <th>County</th>
+                    <th>Acres Burned</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div id="legend">
+        <h4>Acres Burned</h4>
+        <div><span class="legend-color" style="background:#fee5d9"></span>0-1</div>
+        <div><span class="legend-color" style="background:#fcae91"></span>1-5</div>
+        <div><span class="legend-color" style="background:#fb6a4a"></span>5-20</div>
+        <div><span class="legend-color" style="background:#de2d26"></span>20+</div>
+    </div>
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>

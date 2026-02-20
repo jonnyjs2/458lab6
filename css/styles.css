@@ -1,0 +1,61 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+#sidebar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background: #fff;
+    padding: 10px;
+    overflow-y: auto;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+    box-sizing: border-box;
+}
+
+#fireTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#fireTable th, #fireTable td {
+    border: 1px solid #ddd;
+    padding: 5px;
+    text-align: left;
+    font-size: 12px;
+}
+
+#legend {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    font-size: 12px;
+    z-index: 1000;
+}
+
+.legend-color {
+    display: inline-block;
+    width: 20px;
+    height: 12px;
+    margin-right: 5px;
+    vertical-align: middle;
+}

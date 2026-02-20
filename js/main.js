@@ -1,4 +1,4 @@
-mapboxgl.accessToken = process.env.MAPBOX_TOKEN;
+mapboxgl.accessToken = 'pk.eyJ1Ijoiam9ubnlqczIiLCJhIjoiY21oZG56a3h5MDUybzJscHU5dDlveHEyMyJ9.Zj4MO5kQbqLf6QDwWWTs2A';
 
 const map = new mapboxgl.Map({
     container: "map",
@@ -17,13 +17,17 @@ map.on("load", async () => {
     yearLabel.textContent = "Loading data...";
     const response = await fetch("assets/firedata.geojson");
     const data = await response.json();
+
     data.features.forEach(f => {
         f.properties.ACRES_BURNED = Number(f.properties.ACRES_BURNED) || 0;
         const date = new Date(f.properties.DSCVR_DT);
         f.properties.YEAR = date.getFullYear() || 0;
     });
+
     allFeatures = data.features;
+
     map.addSource("fires", { type: "geojson", data: data });
+
     map.addLayer({
         id: "fires-circles",
         type: "circle",
@@ -51,6 +55,7 @@ map.on("load", async () => {
             "circle-opacity": 0.75
         }
     });
+
     const initialYear = parseInt(yearRange.value);
     map.setFilter("fires-circles", ["==", ["get", "YEAR"], initialYear]);
     yearLabel.textContent = initialYear;
